@@ -1,0 +1,26 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/assets/css/bootstrap.css')
+    //- link(rel='stylesheet', href='/assets/css/bootstrap-responsive3.css')
+    link(rel='stylesheet', href='/assets/css/jquery.jsonview.css')
+    link(rel='stylesheet', href='/assets/css/style.css')
+    script(src='/assets/js/jquery-1.8.2.js')
+    script(src='/assets/js/bootstrap.js')
+    script(src='/assets/js/jquery.jsonview.js')
+    script(src='http://localhost:4000/socket.io/socket.io.js')
+    script(src='/assets/js/app.js')
+  body
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a.brand(href='/')
+            strong NodeTail
+          div.nav-collapse.collapse
+            ul.nav
+              li.active
+                a(href='/') php.log
+    div.container
+      div.row-fluid
+        block content
